@@ -28,6 +28,9 @@ class TasksController < ApplicationController
     redirect_to task_path(@task)
   end
 
+  def delete
+  end
+
   private
 
   def task_params
