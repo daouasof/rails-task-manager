@@ -2,9 +2,9 @@
 <p> <%= @task.details %> </p>
 
 <p><% if @task.completed %>
-  [ ]
-  <% else %>
   [x]
+  <% else %>
+  [ ]
   <% end %> This task is completed</p>
 
 <%= link_to 'Back to list', tasks_path %>
