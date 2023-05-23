@@ -1,16 +1,16 @@
 <h1>List of the tasks : </h1>
 
-<ul>
+<ul class="list-group">
 <% @tasks.each do |task| %>
-  <li>
+  <li class="list-group-item">
   <% if task.completed %>
   [x]
   <% else %>
   [ ]
   <% end %>
   <%= link_to task.title, task_path(task.id) %>
-  <%= link_to "delete", delete_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+  <%= link_to "", delete_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash fa-2xs" %></li>
 <% end %>
 </ul>
 
-<%= link_to "Add a new task", new_path %>
+<%= link_to "Add a new task", new_path, class: "btn btn-primary" %>
