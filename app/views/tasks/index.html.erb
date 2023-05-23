@@ -1,0 +1,13 @@
+<h1>List of the tasks : </h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+  <% if task.completed %>
+  [ ]
+  <% else %>
+  [x]
+  <% end %>
+  <%= task.title %></li>
+<% end %>
+</ul>
